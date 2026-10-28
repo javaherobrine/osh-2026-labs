@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 4.3)
+project(shell LANGUAGES C CXX)
+set(CMAKE_CXX_STANDARD 20)
+file(GLOB SOURCES *.cpp)
+add_executable(a.out ${SOURCES})

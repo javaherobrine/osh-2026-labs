@@ -1,0 +1,15 @@
+tracepoint:syscalls:sys_enter_fork,
+tracepoint:syscalls:sys_enter_clone,
+tracepoint:syscalls:sys_enter_clone3{
+	printf("Process forked, PID=%d, ppid=%d\n",pid,ppid);
+}
+tracepoint:syscalls:sys_enter_execve,
+tracepoint:syscalls:sys_enter_execveat{
+	printf("Process %d executed %s, ppid=%d\n",pid,str(args->filename),ppid);
+}
+tracepoint:syscalls:sys_enter_dup2{
+	printf("Process %d created a redirection, fd %d -> %d, ppid=%d\n",pid,args->oldfd,args->newfd,ppid);
+}
+tracepoint:syscalls:sys_enter_kill{
+	printf("Process %d send a signal %d to process %d (If negative, it's process group)\n",pid,args->sig,args->pid);
+}

@@ -1,0 +1,11 @@
+Compiler = g++
+Standard = c++20
+Source = bubblesort.cpp main.cpp
+Flags = -Wextra -Wall
+Target = bubble_sort
+release:
+	$(Compiler) $(Source) -o $(Target) $(Flags) -std=$(Standard)
+debug:
+	$(Compiler) $(Source) -o $(Target) $(Flags) -std=$(Standard) -Ddebug
+clean:
+	rm $(Target)

@@ -1,0 +1,5 @@
+cmake_minimum_required (VERSION 3.31)
+project (release)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_executable(bubble_sort bubblesort.cpp main.cpp)

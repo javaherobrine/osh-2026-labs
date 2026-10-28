@@ -1,0 +1,4 @@
+http://127.0.0.1:8000/index.html
+http://127.0.0.1:8000/favicon.ico
+http://127.0.0.1:8000/style/easteregg.css
+http://127.0.0.1:8000/large_test_file.bin

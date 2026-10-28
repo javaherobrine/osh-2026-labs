@@ -1,0 +1,4 @@
+*.cmake
+CMakeFiles/
+bubble_sort
+CMakeCache.txt
